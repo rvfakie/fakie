@@ -1,0 +1,13 @@
+@use 'mixins' as *;
+
+@mixin text-26-14 {
+  font-size: 26px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 32px;
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}

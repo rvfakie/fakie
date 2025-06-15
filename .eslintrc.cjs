@@ -38,7 +38,7 @@ module.exports = {
     'prefer-template': 'error',
     'grouped-accessor-pairs': ['error', 'getBeforeSet'],
     'no-else-return': ['error', { allowElseIf: false }],
-    'no-multiple-empty-lines': [2, { max: 2, maxEOF: 1 }],
+    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }],
     'newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
     'no-sequences': ['error', { allowInParentheses: false }],
     'brace-style': 'error',
@@ -101,6 +101,7 @@ module.exports = {
     }],
 
     // Vue
+    'vue/no-multiple-template-root': 'off',
     'vue/padding-line-between-tags': ['error', [
       { blankLine: 'always', prev: '*', next: '*' },
     ]],
@@ -168,7 +169,7 @@ module.exports = {
       ignoreWhenEmpty: true,
     }],
     'vue/component-tags-order': ['error', {
-      order: ['script', 'template', 'style'],
+      order: ['template', 'script', 'style'],
     }],
     'vue/html-button-has-type': ['error', {
       button: true,

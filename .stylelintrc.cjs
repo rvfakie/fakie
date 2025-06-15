@@ -39,6 +39,13 @@ module.exports = {
       },
     ],
     '@stylistic/indentation': 2,
+    'order/order': [
+      'declarations',
+      'at-rules',
+      'custom-properties',
+      'dollar-variables',
+      'rules'
+    ],
   },
   overrides: [
     {

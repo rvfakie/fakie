@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--colors-background);
+
+  &.scroll-locked {
+    touch-action: none;
+    overflow: hidden;
+  }
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

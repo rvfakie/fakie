@@ -18,6 +18,7 @@
     "lint-staged": "lint-staged -c ./husky/lint-staged-config.js"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "^9.5.5",
     "nuxt": "^3.17.5",
     "vue": "^3.5.16",
     "vue-router": "^4.5.1"

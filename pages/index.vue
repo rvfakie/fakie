@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <h1>
-      Hi
+  <section>
+    <h1 class="title">
+      {{ $t('common.pronoun') }} <span>fakie</span>
     </h1>
-  </div>
+
+    <p class="subtitle">
+      {{ $t('home.description') }}
+    </p>
+  </section>
 </template>

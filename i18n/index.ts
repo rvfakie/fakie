@@ -20,7 +20,16 @@ declare global {
   type I18nKeys = GenerateKeyPaths<Locale>;
 }
 
+// https://youtrack.jetbrains.com/issue/WEB-59818/Vue-custom-global-properties-added-by-augmenting-vue-are-not-resolved
+// We have to provide the second typing for the global properties to make it work in the JetBrains IDEs
+
 declare module 'vue' {
+  interface ComponentCustomProperties {
+    $t(key: I18nKeys): string;
+  }
+}
+
+declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
     $t(key: I18nKeys): string;
   }

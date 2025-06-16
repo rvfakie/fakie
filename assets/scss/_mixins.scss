@@ -3,3 +3,56 @@
     @content;
   }
 }
+
+@mixin typo-serif {
+  font-family: "Victor Mono", serif;
+}
+
+@mixin typo-sans-serif {
+  font-family: "Montserrat", sans-serif;
+}
+
+@mixin typo-h1 {
+  font-size: 64px;
+  line-height: 72px;
+}
+
+@mixin typo-h2 {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+@mixin typo-h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin typo-h4 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin typo-36 {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+@mixin typo-24 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin typo-20 {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+@mixin typo-18 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin typo-14 {
+  font-size: 14px;
+  line-height: 24px;
+}

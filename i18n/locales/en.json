@@ -1,8 +1,33 @@
 {
+  "home": {
+    "description": "I am web developer with a passion for creating modern and responsive web applications"
+  },
+  "projects": {
+    "title": "portfolio",
+    "description": "Here are some projects I want to share with you. Some were made entirely by me and some others – partially"
+  },
+  "timeline": {
+    "title": "timeline",
+    "description": "Here I show my work experience from the very beginning.\n I am grateful for every part of my journey",
+    "till_present": "till present",
+    "and_I_am": "and I am",
+    "stack": "Stack:",
+    "current": "unemployed",
+    "at": "at",
+    "at_the": "at the",
+    "school": "School",
+    "university": "University",
+    "university_stack": "Information systems and technologies",
+    "university_position": "Bachelor",
+    "usa": "USA",
+    "russia": "Russia"
+  },
   "common": {
+    "pronoun": "it's",
     "menu": {
       "home": "Home",
-      "projects": "Projects"
+      "projects": "Projects",
+      "timeline": "Timeline"
     }
   }
 }

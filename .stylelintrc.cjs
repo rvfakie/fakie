@@ -47,10 +47,4 @@ module.exports = {
       'rules'
     ],
   },
-  overrides: [
-    {
-      files: ['**/*.scss'],
-      customSyntax: 'postcss-scss',
-    },
-  ],
 };

@@ -38,7 +38,6 @@ module.exports = {
     'prefer-template': 'error',
     'grouped-accessor-pairs': ['error', 'getBeforeSet'],
     'no-else-return': ['error', { allowElseIf: false }],
-    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }],
     'newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
     'no-sequences': ['error', { allowInParentheses: false }],
     'brace-style': 'error',

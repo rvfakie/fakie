@@ -1,5 +1,17 @@
 :root {
-  --colors-primary: #e869a4;
-  --colors-secondary: #809ee0;
-  --colors-background: #d3cbcb;
+  --colors-primary: #ffffff;
+  --colors-primary-separator: #E0E0E0;
+  --colors-primary-text: #232323;
+  
+  --colors-secondary: #1A1A1A;
+  --colors-secondary-separator: #2E2E2E;
+  --colors-secondary-text: #a5a5a5;
+
+  --colors-accent-light: #D9E4F5;
+  --colors-accent: #BFCDE0;
+  --colors-accent-dark: #A3BFD9;
+
+  --colors-link: #2e9aff;
+
+  --transition-short: .128s;
 }

@@ -4,7 +4,6 @@ export const dateShort = function(date: Date) {
   return new Intl.DateTimeFormat(selectedLocaleObject.value?.language, {
     month: 'long',
     day: 'numeric',
-    timeZone: 'UTC',
   }).format(date);
 };
 
@@ -15,7 +14,6 @@ export const dateMedium = function(date: Date) {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
-    timeZone: 'UTC',
   }).format(date);
 };
 
@@ -25,7 +23,6 @@ export const monthMedium = function(date: Date) {
   return new Intl.DateTimeFormat(selectedLocaleObject.value?.language, {
     month: 'long',
     year: 'numeric',
-    timeZone: 'UTC',
   }).format(date);
 };
 

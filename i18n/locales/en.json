@@ -1,6 +1,6 @@
 {
   "home": {
-    "description": "I am web developer with a passion for creating modern and responsive web applications"
+    "description": "I'm web developer with a passion for creating modern and responsive web applications"
   },
   "projects": {
     "title": "portfolio",
@@ -8,11 +8,10 @@
   },
   "timeline": {
     "title": "timeline",
-    "description": "Here I show my work experience from the very beginning.\n I am grateful for every part of my journey",
-    "till_present": "till present",
-    "and_I_am": "and I am",
+    "description": "Here I show my experience from the very beginning.\n I'm grateful for every part of my journey",
+    "and_I_am": "and I'm",
     "stack": "Stack:",
-    "current": "unemployed",
+    "current": "looking for a job",
     "at": "at",
     "at_the": "at the",
     "school": "School",

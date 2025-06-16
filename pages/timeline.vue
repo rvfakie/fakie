@@ -17,14 +17,12 @@
 
       <div class="timeline">
         <div
-          v-for="(partOfMyLife, index) in timeline"
+          v-for="partOfMyLife in timeline"
           :key="partOfMyLife.id"
           class="part"
         >
-          <div>
-            <span class="date">
-              {{ monthMedium(partOfMyLife.date) }} {{ index === 0 ? `(${$t('timeline.till_present')}) ` : '' }}
-            </span>
+          <p>
+            <span class="date">{{ partOfMyLife.date }} {{ }}</span>
 
             <span class="i-am">
               {{ $t('timeline.and_I_am') }} {{ partOfMyLife.preposition }}
@@ -40,7 +38,7 @@
                 {{ partOfMyLife.title }}
               </span>
             </span>
-          </div>
+          </p>
 
           <div
             v-if="!partOfMyLife.short"
@@ -74,21 +72,21 @@
 </template>
 
 <script setup lang="ts">
-import { monthMedium } from '~/utils/formatDate.js';
+import { monthMedium, dateMedium } from '~/utils/formatDate.js';
 
 const { t } = useI18nTyped();
 
 const timeline = ref([
   {
     id: '1',
-    date: new Date('2025-03-01'),
+    date: dateMedium(new Date()),
     title: t('timeline.current'),
     preposition: '',
     short: true,
   },
   {
     id: '2',
-    date: new Date('2020-12-01'),
+    date: `${monthMedium(new Date('2020-12-01'))} – ${monthMedium(new Date('2025-03-01'))}`,
     title: 'Stork club',
     preposition: t('timeline.at_the'),
     country: t('timeline.usa'),
@@ -99,7 +97,7 @@ const timeline = ref([
   },
   {
     id: '3',
-    date: new Date('2019-09-01'),
+    date: `${monthMedium(new Date('2019-09-01'))} – ${monthMedium(new Date('2020-12-01'))}`,
     title: 'Oboz',
     preposition: t('timeline.at_the'),
     country: t('timeline.russia'),
@@ -110,7 +108,7 @@ const timeline = ref([
   },
   {
     id: '15',
-    date: new Date('2014-09-01'),
+    date: `${monthMedium(new Date('2014-09-01'))} – ${monthMedium(new Date('2017-08-01'))}`,
     title: t('timeline.university'),
     preposition: t('timeline.at_the'),
     country: t('timeline.russia'),
@@ -122,9 +120,9 @@ const timeline = ref([
   },
   {
     id: '25',
-    date: new Date('2012-06-01'),
+    date: `${monthMedium(new Date('2003-09-01'))} – ${monthMedium(new Date('2012-08-01'))}`,
     title: t('timeline.school'),
-    preposition: 'at',
+    preposition: t('timeline.at'),
     short: true,
   },
 ]);

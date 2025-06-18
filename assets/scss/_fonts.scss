@@ -1,13 +1,61 @@
 @use 'mixins' as *;
 
-@mixin text-26-14 {
-  font-size: 26px;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 32px;
+@mixin typo-serif {
+  font-family: "Victor Mono", serif;
+}
 
-  @include mobile {
-    font-size: 14px;
-    line-height: 21px;
-  }
+@mixin typo-sans-serif {
+  font-family: "Roboto", sans-serif;
+}
+
+@mixin typo-link {
+  color: var(--colors-link);
+  text-decoration: underline;
+
+  @include ui-default-hover;
+}
+
+@mixin typo-h1 {
+  font-size: 96px;
+  line-height: 102px;
+}
+
+@mixin typo-h2 {
+  font-size: 48px;
+  line-height: 54px;
+}
+
+@mixin typo-h3 {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+@mixin typo-h4 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin typo-36 {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+@mixin typo-24 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin typo-20 {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+@mixin typo-18 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin typo-14 {
+  font-size: 14px;
+  line-height: 24px;
 }

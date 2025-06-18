@@ -1,57 +1,82 @@
 <template>
   <header class="header">
     <button
-      v-for="l in locales"
-      :key="l.code"
-      :value="l.code"
-      :class="['language', { 'active': l.code === locale }]"
+      class="button"
       type="button"
-      @click="setLocale(l.code);"
+      @click="toggleColorTheme"
     >
-      {{ l.name }}
+      {{ colorThemeText }}
     </button>
+
+    <div class="languages">
+      <button
+        v-for="l in locales"
+        :key="l.code"
+        :class="['button', { 'active': l.code === locale }]"
+        type="button"
+        @click="setLocale(l.code)"
+      >
+        {{ l.name }}
+      </button>
+    </div>
   </header>
 </template>
 
 <script setup lang="ts">
-const { setLocale, locales, locale } = useI18n();
+const { setLocale, locales, locale, t } = useI18nTyped();
+
+const colorTheme = useCookie('color-theme');
+const themeSwitchInProgress = ref(false);
+
+useHead({
+  htmlAttrs: {
+    class: () => themeSwitchInProgress.value ? 'color-theme-transition' : '',
+    'data-color-theme': () => colorTheme.value,
+  },
+});
+
+onBeforeMount(() => {
+  if (!colorTheme.value) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      colorTheme.value = 'dark';
+    } else {
+      colorTheme.value = 'light';
+    }
+  }
+});
+
+const colorThemeText = computed(
+  () => colorTheme.value === 'light' ?
+    t('common.color_theme_dark') :
+    t('common.color_theme_light'),
+);
+
+const toggleColorTheme = () => {
+  themeSwitchInProgress.value = true;
+  colorTheme.value = colorTheme.value === 'light' ? 'dark' : 'light';
+
+  setTimeout(() => (themeSwitchInProgress.value = false), 200);
+};
 </script>
 
 <style lang="scss" scoped>
-@keyframes active-link {
-
-  from {
-    font-weight: 100;
-  }
-
-  to {
-    font-weight: 900;
-  }
-}
-
-@keyframes inactive-link {
-
-  from {
-    font-weight: 900;
-  }
-
-  to {
-    font-weight: 100;
-  }
-}
-
 .header {
   display: flex;
   gap: 16px;
-  justify-content: flex-end;
+  justify-content: space-between;
 
   padding: 4px 16px;
 
   background: var(--colors-primary);
-  border-bottom: 2px solid var(--colors-primary-text);
+  border-bottom: 2px solid var(--colors-primary-border);
 }
 
-.language {
+.languages {
+  display: flex;
+  gap: 16px;
+}
+
+.button {
   padding: 0;
 
   font-family: inherit;
@@ -62,11 +87,14 @@ const { setLocale, locales, locale } = useI18n();
   appearance: none;
   background: transparent;
   border: none;
+}
 
-  animation: inactive-link var(--transition-short) ease-in forwards;
+.button:not(.active) {
+  @include ui-thin-link;
+  @include ui-default-hover;
 }
 
 .active {
-  animation: active-link var(--transition-short) ease-in forwards;
+  @include ui-bold-link;
 }
 </style>

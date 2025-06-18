@@ -23,13 +23,13 @@ export default defineNuxtConfig({
         code: 'en',
         language: 'en-US',
         name: 'English',
-        file: 'en.json',
+        file: 'en.ts',
       },
       {
         code: 'ru',
         language: 'ru-RU',
         name: 'Русский',
-        file: 'ru.json',
+        file: 'ru.ts',
       },
     ],
     compilation: {

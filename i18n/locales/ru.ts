@@ -1,0 +1,73 @@
+import en from './en';
+
+export default {
+  home: {
+    description: 'Я веб-разработчик, увлеченный созданием современных и адаптивных веб-приложений',
+  },
+  cv: {
+    title: 'портфолио',
+    description: 'Тут мой опыт работы с самого начала',
+    usa: 'США',
+    russia: 'Россия',
+    current: 'открыт к предложениям',
+    and_I_am: 'и я',
+    at: 'в',
+    at_the: 'в',
+    school: 'школе',
+    stack: 'Стэк:',
+    tasks: 'Задачи:',
+    achievements: 'Достижения:',
+
+    university: 'университете',
+    university_stack: 'Автоматизированные системы управления, Информационные системы и технологии',
+    university_position: 'Бакалавр',
+    university_task_1: 'Defended diploma',
+    university_task_2: 'Passed state exams',
+
+    storkclub_task_1: 'Developed and maintained healthcare portals for US clients',
+    storkclub_task_2: 'Worked on client portal, admin dashboard, marketing landing pages',
+    storkclub_task_3: 'Took part in sprint plannings',
+    storkclub_achievement_1: 'i18n with Lokalise and Smartcat, including RTL',
+    storkclub_achievement_2: 'a11y compliance',
+    storkclub_achievement_3: 'API response validation and typing with Superstruct',
+    storkclub_achievement_4: 'Swagger-to-Superstruct schema automation',
+    storkclub_achievement_5: 'UI/UX, UI-kit implementation from mockups with documentation in Storybook',
+    storkclub_achievement_6: 'Explored Cursor AI',
+
+    oboz_task_1: 'Developed and maintained digital logistic web application',
+    oboz_task_2: 'Worked on personal account, security service, tenders, task monitor and registration/authorization modules',
+    oboz_task_3: 'Developed frontend architecture',
+    oboz_task_4: 'Refactored legacy code',
+    oboz_task_5: 'Took part in sprint plannings',
+    oboz_achievement_1: 'Scalable web components',
+    oboz_achievement_2: 'UI/UX, UI-kit implementation from mockups with documentation in Storybook',
+    oboz_achievement_3: 'Lead of group of 2 other frontend developers',
+
+    lam_task_1: 'Developed various marketing web pages (special projects) for the-village.ru, wonderzine.com, spletnik.ru',
+    lam_task_2: 'Worked on templates for non-marketing content pages',
+    lam_achievement_1: 'Questionnaire content module',
+    lam_achievement_2: 'Tool for data-sharing between editor and developer',
+    lam_achievement_3: 'Integration with setka.io',
+
+    setka_task_1: 'Combined work with Look At Media',
+    setka_task_2: 'Frontend development for editor.setka.io, workflow.setka.io',
+    setka_task_3: 'Refactored code',
+    setka_task_4: 'Implemented layouts',
+
+    inright_task_1: 'Frontend development for groozin.ru, choiceapp.ru',
+
+    flexcore_task_1: 'Developed and maintained frontend for various partners websites and online stores',
+    flexcore_task_2: 'Integrated the internal CMS',
+    flexcore_task_3: 'Developed features, fixed bugs',
+    flexcore_achievement_1: 'Cross-browser, responsive layout (including IE8)',
+  },
+  common: {
+    pronoun: 'это',
+    menu: {
+      home: 'Главная',
+      cv: 'Портфолио',
+    },
+    color_theme_dark: 'тьма',
+    color_theme_light: 'свет',
+  },
+} satisfies typeof en;

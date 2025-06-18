@@ -4,55 +4,48 @@
   }
 }
 
-@mixin typo-serif {
-  font-family: "Victor Mono", serif;
+@mixin hoverable {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
 }
 
-@mixin typo-sans-serif {
-  font-family: "Montserrat", sans-serif;
+@mixin ui-default-hover {
+  @include hoverable {
+    transition: opacity var(--transition-short) linear;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
 }
 
-@mixin typo-h1 {
-  font-size: 64px;
-  line-height: 72px;
+@keyframes active-link {
+
+  from {
+    font-weight: 100;
+  }
+
+  to {
+    font-weight: 900;
+  }
 }
 
-@mixin typo-h2 {
-  font-size: 36px;
-  line-height: 42px;
+@keyframes inactive-link {
+
+  from {
+    font-weight: 900;
+  }
+
+  to {
+    font-weight: 100;
+  }
 }
 
-@mixin typo-h3 {
-  font-size: 24px;
-  line-height: 32px;
+@mixin ui-bold-link {
+  animation: active-link var(--transition-short) ease-in forwards;
 }
 
-@mixin typo-h4 {
-  font-size: 18px;
-  line-height: 24px;
-}
-
-@mixin typo-36 {
-  font-size: 36px;
-  line-height: 42px;
-}
-
-@mixin typo-24 {
-  font-size: 24px;
-  line-height: 32px;
-}
-
-@mixin typo-20 {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-@mixin typo-18 {
-  font-size: 18px;
-  line-height: 24px;
-}
-
-@mixin typo-14 {
-  font-size: 14px;
-  line-height: 24px;
+@mixin ui-thin-link {
+  animation: inactive-link var(--transition-short) ease-in forwards;
 }

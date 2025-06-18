@@ -1,5 +1,5 @@
-import en from './locales/en.json';
-import ru from './locales/ru.json';
+import en from './locales/en';
+import ru from './locales/ru';
 
 // Options type generation I18n is available as experimetnal feature in v9
 // https://i18n.nuxtjs.org/docs/api/options#typedoptionsandmessages

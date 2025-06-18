@@ -7,11 +7,11 @@
 }
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Roboto";
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+  src: url("../fonts/Roboto-VariableFont_wdth,wght.ttf");
 }
 
 body {
@@ -41,6 +41,17 @@ html {
   -webkit-text-size-adjust: 100%;
 
   @include typo-sans-serif;
+
+  &.color-theme-transition {
+
+    *,
+    *::before,
+    *::after {
+      transition: background var(--transition-short) ease-in, color var(--transition-short) ease-in,
+        border-color var(--transition-short) ease-in, fill var(--transition-short) ease-in,
+        stroke var(--transition-short) ease-in !important;
+    }
+  }
 
   &,
   body,

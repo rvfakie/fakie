@@ -1,17 +1,44 @@
-:root {
+@mixin light-colors {
   --colors-primary: #ffffff;
-  --colors-primary-separator: #E0E0E0;
-  --colors-primary-text: #232323;
-  
-  --colors-secondary: #1A1A1A;
-  --colors-secondary-separator: #2E2E2E;
+  --colors-primary-text: #3c3c3c;
+  --colors-primary-border: #3c3c43;
+
+  --colors-link: #3451b2;
+}
+
+@mixin dark-colors {
+  --colors-primary: #1b1b1f;
+  --colors-primary-text: #e0e0e0;
+  --colors-primary-border: #3c3c43;
+
+  --colors-link: #a8b1ff;
+}
+
+:root {
+  --colors-secondary: #070707;
   --colors-secondary-text: #a5a5a5;
 
-  --colors-accent-light: #D9E4F5;
-  --colors-accent: #BFCDE0;
-  --colors-accent-dark: #A3BFD9;
-
-  --colors-link: #2e9aff;
-
   --transition-short: .128s;
+}
+
+@media (prefers-color-scheme: light) {
+
+  :root {
+    @include light-colors;
+  }
+}
+
+html[data-color-theme="light"] {
+  @include light-colors;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    @include dark-colors;
+  }
+}
+
+html[data-color-theme="dark"] {
+  @include dark-colors;
 }

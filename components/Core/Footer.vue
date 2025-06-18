@@ -14,18 +14,9 @@
         <li>
           <NuxtLinkLocale
             class="link"
-            to="/projects"
+            to="/cv"
           >
-            {{ $t('common.menu.projects') }}
-          </NuxtLinkLocale>
-        </li>
-
-        <li>
-          <NuxtLinkLocale
-            class="link"
-            to="/timeline"
-          >
-            {{ $t('common.menu.timeline') }}
+            {{ $t('common.menu.cv') }}
           </NuxtLinkLocale>
         </li>
       </ul>
@@ -34,28 +25,6 @@
 </template>
 
 <style lang="scss" scoped>
-@keyframes active-link {
-
-  from {
-    font-weight: 100;
-  }
-
-  to {
-    font-weight: 900;
-  }
-}
-
-@keyframes inactive-link {
-
-  from {
-    font-weight: 900;
-  }
-
-  to {
-    font-weight: 100;
-  }
-}
-
 .footer {
   padding: 0 16px;
 
@@ -72,12 +41,12 @@
   gap: 16px;
 }
 
-.link {
-  animation: inactive-link var(--transition-short) ease-in forwards;
+.link:not(.router-link-active) {
+  @include ui-thin-link;
+  @include ui-default-hover;
 }
 
-.router-link-active,
-.router-link-exact-active {
-  animation: active-link var(--transition-short) ease-in forwards;
+.router-link-active {
+  @include ui-bold-link;
 }
 </style>

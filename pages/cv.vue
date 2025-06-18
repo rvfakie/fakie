@@ -9,19 +9,19 @@
     </h2>
 
     <p class="text">
-      full-time, part-time, remote
+      {{ $t('cv.work_schedule') }}
     </p>
 
     <p class="text">
-      I can work under a contract or as an individual entrepreneur
+      {{ $t('cv.work_type') }}
     </p>
 
     <p class="text">
-      Work permit: Russia, Georgia (individual entrepreneur)
+      {{ $t('cv.work_permit') }}
     </p>
 
     <h3 class="caption">
-      Contacts
+      {{ $t('cv.contacts') }}
     </h3>
 
     <p class="text">
@@ -48,15 +48,15 @@
     <CvTimeline />
 
     <p class="subtitle journey">
-      I'm grateful for every part of my journey
+      {{ $t('cv.journey') }}
     </p>
 
     <p class="text">
-      Languages: Russian (native), English (C1)
+      {{ $t('cv.languages') }}
     </p>
 
     <h3 class="caption">
-      Links
+      {{ $t('cv.links') }}
     </h3>
 
     <p class="text">
@@ -83,7 +83,10 @@
 .journey {
   margin: 100px 0;
   font-weight: 500;
-  white-space: pre-line;
+
+  @include mobile {
+    margin: 64px 0;
+  }
 }
 
 .caption {
@@ -92,12 +95,20 @@
 
 .text {
   margin-bottom: 16px;
-  font-size: 24px;
-
-  @include typo-serif;
 
   a {
-    @include typo-link;
+    @include ui-link;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include typo-24-18;
+  @include typo-serif;
+
+  @include mobile {
+    margin-bottom: 10px;
   }
 }
 </style>

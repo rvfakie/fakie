@@ -20,6 +20,13 @@
   }
 }
 
+@mixin ui-link {
+  color: var(--colors-link);
+  text-decoration: underline;
+
+  @include ui-default-hover;
+}
+
 @keyframes active-link {
 
   from {
@@ -42,10 +49,10 @@
   }
 }
 
-@mixin ui-bold-link {
+@mixin ui-animated-bold-link {
   animation: active-link var(--transition-short) ease-in forwards;
 }
 
-@mixin ui-thin-link {
+@mixin ui-animated-thin-link {
   animation: inactive-link var(--transition-short) ease-in forwards;
 }

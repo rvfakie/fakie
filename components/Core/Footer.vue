@@ -28,7 +28,6 @@
 .footer {
   padding: 0 16px;
 
-  font-size: 48px;
   font-weight: 100;
   color: var(--colors-secondary-text);
   text-transform: uppercase;
@@ -39,14 +38,23 @@
 .list {
   display: flex;
   gap: 16px;
+  align-items: center;
+}
+
+.link {
+  @include typo-48;
 }
 
 .link:not(.router-link-active) {
-  @include ui-thin-link;
+  @include ui-animated-thin-link;
   @include ui-default-hover;
+
+  @include mobile {
+    @include typo-28;
+  }
 }
 
 .router-link-active {
-  @include ui-bold-link;
+  @include ui-animated-bold-link;
 }
 </style>

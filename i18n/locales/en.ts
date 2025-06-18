@@ -5,6 +5,13 @@ export default {
   cv: {
     title: 'CV',
     description: 'Here is my experience from the very beginning',
+    work_schedule: 'full-time, part-time, remote',
+    work_type: 'I can work under a contract or as an individual entrepreneur',
+    work_permit: 'Work permit: Russia, Georgia (individual entrepreneur)',
+    contacts: 'Contacts',
+    journey: 'I\'m grateful for every part of my journey',
+    languages: 'Languages: Russian (native), English (C1)',
+    links: 'Links',
     usa: 'USA',
     russia: 'Russia',
     current: 'looking for a job',
@@ -39,25 +46,25 @@ export default {
     oboz_task_5: 'Took part in sprint plannings',
     oboz_achievement_1: 'Scalable web components',
     oboz_achievement_2: 'UI/UX, UI-kit implementation from mockups with documentation in Storybook',
-    oboz_achievement_3: 'Lead of group of 2 other frontend developers',
+    oboz_achievement_3: 'Lead of group of 2 frontend developers',
 
     lam_task_1: 'Developed various marketing web pages (special projects) for the-village.ru, wonderzine.com, spletnik.ru',
     lam_task_2: 'Worked on templates for non-marketing content pages',
     lam_achievement_1: 'Questionnaire content module',
-    lam_achievement_2: 'Tool for data-sharing between editor and developer',
+    lam_achievement_2: 'Tool for data sharing between editor and developer',
     lam_achievement_3: 'Integration with setka.io',
 
     setka_task_1: 'Combined work with Look At Media',
     setka_task_2: 'Frontend development for editor.setka.io, workflow.setka.io',
     setka_task_3: 'Refactored code',
-    setka_task_4: 'Implemented layouts',
 
     inright_task_1: 'Frontend development for groozin.ru, choiceapp.ru',
 
     flexcore_task_1: 'Developed and maintained frontend for various partners websites and online stores',
     flexcore_task_2: 'Integrated the internal CMS',
     flexcore_task_3: 'Developed features, fixed bugs',
-    flexcore_achievement_1: 'Cross-browser, responsive layout (including IE8)',
+    flexcore_achievement_1: 'First work experience',
+    flexcore_achievement_2: 'Cross-browser, responsive layout (including IE8)',
   },
   common: {
     pronoun: 'it\'s',

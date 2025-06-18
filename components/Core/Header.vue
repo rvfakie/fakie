@@ -30,7 +30,7 @@ const themeSwitchInProgress = ref(false);
 
 useHead({
   htmlAttrs: {
-    class: () => themeSwitchInProgress.value ? 'color-theme-transition' : '',
+    class: () => themeSwitchInProgress.value && 'color-theme-transition',
     'data-color-theme': () => colorTheme.value,
   },
 });
@@ -80,21 +80,22 @@ const toggleColorTheme = () => {
   padding: 0;
 
   font-family: inherit;
-  font-size: 24px;
   color: inherit;
   text-transform: uppercase;
 
   appearance: none;
   background: transparent;
   border: none;
+
+  @include typo-24-20;
 }
 
 .button:not(.active) {
-  @include ui-thin-link;
+  @include ui-animated-thin-link;
   @include ui-default-hover;
 }
 
 .active {
-  @include ui-bold-link;
+  @include ui-animated-bold-link;
 }
 </style>

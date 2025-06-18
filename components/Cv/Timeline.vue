@@ -12,10 +12,11 @@
         :key="partOfMyLife.id"
         class="part"
       >
-        <p>
+        <p class="point">
           <span class="date">{{ partOfMyLife.date }} {{ }}</span>
 
           <span class="i-am">
+
             {{ $t('cv.and_I_am') }} {{ partOfMyLife.preposition }}
 
             <strong v-if="partOfMyLife.thin_title || partOfMyLife.short">
@@ -52,7 +53,7 @@
             </a>
           </span>
 
-          <span class="serif-subtext">
+          <span class="stack">
             {{ $t('cv.stack') }} {{ partOfMyLife.stack }}
           </span>
 
@@ -109,7 +110,7 @@ const timeline = ref([
     preposition: t('cv.at_the'),
     country: t('cv.usa'),
     position: 'Senior Frontend Engineer',
-    stack: 'vue 3, nuxt 3, react, pinia, typesctipt, sass, vite',
+    stack: 'vue 3, nuxt 3, react, pinia, typescript, sass, vite',
     tasks: [
       t('cv.storkclub_task_1'),
       t('cv.storkclub_task_2'),
@@ -181,7 +182,6 @@ const timeline = ref([
       t('cv.setka_task_1'),
       t('cv.setka_task_2'),
       t('cv.setka_task_3'),
-      t('cv.setka_task_4'),
     ],
     website: 'setka.io',
     url: 'https://setka.io',
@@ -213,6 +213,7 @@ const timeline = ref([
     ],
     achievements: [
       t('cv.flexcore_achievement_1'),
+      t('cv.flexcore_achievement_2'),
     ],
     website: 'flexcore.ru',
     url: 'https://flexcore.ru',
@@ -244,20 +245,20 @@ const timeline = ref([
 </script>
 
 <style lang="scss" scoped>
-.journey {
-  margin-bottom: 100px;
-  white-space: pre-line;
-}
-
 .timeline-container {
   display: flex;
   gap: 16px;
   align-items: flex-start;
   justify-content: flex-start;
 
-  margin: 100px 0;
+  margin: 100px 0 100px 16px;
 
   border-left: 2px solid var(--colors-primary-text);
+
+  @include mobile {
+    gap: 12px;
+    margin: 64px 0 90px 9px;
+  }
 }
 
 .pointer {
@@ -269,6 +270,10 @@ const timeline = ref([
   align-items: center;
 
   margin-left: -17px;
+
+  @include mobile {
+    margin-left: -11px;
+  }
 }
 
 .circle {
@@ -276,12 +281,21 @@ const timeline = ref([
   height: 32px;
   background: var(--colors-primary-text);
   border-radius: 50%;
+
+  @include mobile {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .timeline {
   display: flex;
   flex-direction: column;
   gap: 100px;
+
+  @include mobile {
+    gap: 72px;
+  }
 }
 
 .date {
@@ -304,6 +318,11 @@ const timeline = ref([
 
   margin-top: 16px;
   padding-left: 32px;
+
+  @include mobile {
+    gap: 12px;
+    padding-left: 0;
+  }
 }
 
 .its,
@@ -311,11 +330,22 @@ const timeline = ref([
   @include typo-serif;
 }
 
+.its {
+  @include mobile {
+    display: none;
+  }
+}
+
 .i-am {
   font-weight: 300;
+
+  @include mobile {
+    display: block;
+  }
 }
 
 .part {
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -324,7 +354,25 @@ const timeline = ref([
   }
 
   &:last-child {
-    margin: 0 0 5px;
+    margin: 0 0 4px;
+  }
+
+  @include mobile {
+
+    &:first-child,
+    &:last-child {
+      margin: 0;
+    }
+
+    &:last-child {
+      height: 20px;
+
+      .point {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
   }
 }
 
@@ -337,15 +385,15 @@ const timeline = ref([
   font-weight: 600;
 }
 
-.serif-subtext {
+.stack {
   @include typo-serif;
-  @include typo-18;
+  @include typo-18-16;
 }
 
 .link {
   font-weight: 400;
 
-  @include typo-link;
+  @include ui-link;
 }
 
 .tasks {
@@ -357,23 +405,34 @@ const timeline = ref([
   display: flex;
   flex-direction: column;
   gap: 4px;
+  padding-left: 16px;
+
+  li {
+    padding-left: 10px;
+  }
 
   @include typo-serif;
+
+  @include mobile {
+    gap: 6px;
+
+    li {
+      padding-left: 6px;
+    }
+  }
 }
 
 .list {
 
   > li {
-    list-style: inside;
     list-style-type: disc;
   }
 }
 
 .inner-list {
-  margin: 8px 0 0 32px;
+  margin-top: 8px;
 
   > li {
-    list-style: inside;
     list-style-type: circle;
   }
 }

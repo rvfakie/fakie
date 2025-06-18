@@ -40,8 +40,6 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 
-  @include typo-sans-serif;
-
   &.color-theme-transition {
 
     *,
@@ -60,6 +58,9 @@ html {
     flex: 1;
     flex-direction: column;
   }
+
+  @include typo-sans-serif;
+  @include typo-16;
 }
 
 ul,
@@ -92,8 +93,4 @@ h2 {
 
 h3 {
   @include typo-h3;
-}
-
-h4 {
-  @include typo-h4;
 }

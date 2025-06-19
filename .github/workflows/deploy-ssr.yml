@@ -41,7 +41,10 @@ jobs:
           script: |
             cd ${{ secrets.VPS_DEPLOY_PATH }}
 
+            # Full path to pm2
+            export PM2=/root/.nvm/versions/node/v22.11.0/bin/pm2
+
             # Restart with PM2
-            if pm2 ls | grep "fakie.ru"; then
-              pm2 restart fakie.ru
+            if $PM2 ls | grep "fakie.ru"; then
+              $PM2 restart fakie.ru
             fi

@@ -77,15 +77,7 @@ const toggleColorTheme = () => {
 }
 
 .button {
-  padding: 0;
-
-  font-family: inherit;
-  color: inherit;
   text-transform: uppercase;
-
-  appearance: none;
-  background: transparent;
-  border: none;
 
   @include typo-24-20;
 }

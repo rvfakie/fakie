@@ -41,11 +41,21 @@
       </a>
     </p>
 
-    <p class="subtitle journey">
+    <p
+      class="subtitle journey"
+    >
       {{ $t('cv.description') }}
+
+      <button
+        type="button"
+        class="order-button"
+        @click="reverse = !reverse"
+      >
+        {{ reverse ? $t('cv.ascending') : $t('cv.descending') }}
+      </button>
     </p>
 
-    <CvTimeline />
+    <CvTimeline :reverse="reverse" />
 
     <p class="subtitle journey">
       {{ $t('cv.journey') }}
@@ -79,6 +89,10 @@
   </section>
 </template>
 
+<script setup lang="ts">
+const reverse = ref(false);
+</script>
+
 <style lang="scss" scoped>
 .journey {
   margin: 100px 0;
@@ -110,5 +124,13 @@
   @include mobile {
     margin-bottom: 10px;
   }
+}
+
+.order-button {
+  cursor: pointer;
+  text-decoration: underline;
+
+  @include typo-36-24;
+  @include ui-default-hover;
 }
 </style>

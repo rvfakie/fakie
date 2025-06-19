@@ -1,6 +1,9 @@
 <template>
   <div class="timeline-container">
-    <div class="pointer">
+    <div
+      class="pointer"
+      @click="timeline.reverse()"
+    >
       <div class="circle" />
 
       <span class="its">{{ $t('common.pronoun') }}</span>
@@ -8,7 +11,7 @@
 
     <div class="timeline">
       <div
-        v-for="partOfMyLife in timeline"
+        v-for="partOfMyLife in computedTimeline"
         :key="partOfMyLife.id"
         class="part"
       >
@@ -94,6 +97,10 @@
 import { monthMedium, dateMedium } from '~/utils/formatDate.js';
 
 const { t } = useI18nTyped();
+
+const props = defineProps<{
+  reverse: boolean;
+}>();
 
 const timeline = ref([
   {
@@ -242,6 +249,10 @@ const timeline = ref([
     short: true,
   },
 ]);
+
+const computedTimeline = computed(() =>
+  (props.reverse && timeline.value.toReversed()) || timeline.value,
+);
 </script>
 
 <style lang="scss" scoped>

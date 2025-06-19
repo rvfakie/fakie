@@ -4,7 +4,9 @@ export default {
   },
   cv: {
     title: 'CV',
-    description: 'Here is my experience from the very beginning',
+    description: 'Here is my experience in',
+    ascending: 'ascending order',
+    descending: 'descending order',
     work_schedule: 'full-time, part-time, remote',
     work_type: 'I can work under a contract or as an individual entrepreneur',
     work_permit: 'Work permit: Russia, Georgia (individual entrepreneur)',
@@ -58,7 +60,7 @@ export default {
     setka_task_2: 'Frontend development for editor.setka.io, workflow.setka.io',
     setka_task_3: 'Refactored code',
 
-    inright_task_1: 'Frontend development for groozin.ru, choiceapp.ru',
+    inright_task_1: 'Frontend development for choiceapp.ru',
 
     flexcore_task_1: 'Developed and maintained frontend for various partners websites and online stores',
     flexcore_task_2: 'Integrated the internal CMS',

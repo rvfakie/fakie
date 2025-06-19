@@ -24,7 +24,6 @@
   font-weight: 100;
 
   @include typo-serif;
-
   @include typo-36-24;
 }
 </style>

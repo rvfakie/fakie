@@ -6,7 +6,9 @@ export default {
   },
   cv: {
     title: 'резюме',
-    description: 'Тут мой опыт работы с самого начала',
+    description: 'Тут мой опыт работы с',
+    ascending: 'самого начала',
+    descending: 'конца',
     work_schedule: 'фултайм, частичная занятость, удаленка',
     work_type: 'Могу работать по контракту или как ИП',
     work_permit: 'Разрешение на работу: РФ, Грузия (ИП)',
@@ -36,7 +38,7 @@ export default {
     storkclub_task_3: 'Планирование спринтов',
     storkclub_achievement_1: 'i18n с интеграцией Lokalise и Smartcat, включая поддержку RTL',
     storkclub_achievement_2: 'соответствие a11y',
-    storkclub_achievement_3: 'Валидация ответов от API и его тайпинг через Superstruct',
+    storkclub_achievement_3: 'Валидация ответов от API и их тайпинг через Superstruct',
     storkclub_achievement_4: 'Автоматизация схем из Swagger в Superstruct',
     storkclub_achievement_5: 'UI/UX, реализация UI-kit из макетов с документацией в Storybook',
     storkclub_achievement_6: 'Начал работать с Cursor AI',
@@ -60,7 +62,7 @@ export default {
     setka_task_2: 'Разработка клиентской части editor.setka.io, workflow.setka.io',
     setka_task_3: 'Рефакторинг кода',
 
-    inright_task_1: 'Разработка клиентской части groozin.ru, choiceapp.ru',
+    inright_task_1: 'Разработка клиентской части choiceapp.ru',
 
     flexcore_task_1: 'Разработка и поддержка клиентской части сайтов и онлайн магазинов партнеров',
     flexcore_task_2: 'Интеграция с корпоративной CMS',

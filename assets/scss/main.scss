@@ -1,3 +1,4 @@
+/* stylelint-disable no-duplicate-selectors */
 @font-face {
   font-family: "Victor Mono";
   font-weight: 100 700;
@@ -60,8 +61,10 @@ html {
     flex-direction: column;
   }
 
-  @include typo-sans-serif;
-  @include typo-16;
+  & {
+    @include typo-sans-serif;
+    @include typo-16;
+  }
 }
 
 button {

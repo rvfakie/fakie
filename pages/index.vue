@@ -51,6 +51,6 @@ import Illustration from '~/assets/svg/fakie-3.svg?component';
   position: absolute;
   width: 100%;
   height: 100%;
-  color: var(--colors-primary-border);
+  color: var(--colors-primary-illustration);
 }
 </style>

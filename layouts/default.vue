@@ -27,14 +27,3 @@
   @include typo-36-24;
 }
 </style>
-
-<style lang="scss" scoped>
-.content {
-  flex: 1;
-  padding: 64px;
-
-  @include mobile {
-    padding: 32px 16px;
-  }
-}
-</style>

@@ -61,6 +61,9 @@ const toggleColorTheme = () => {
 
 <style lang="scss" scoped>
 .header {
+  position: relative;
+  z-index: 1;
+
   display: flex;
   gap: 16px;
   justify-content: space-between;

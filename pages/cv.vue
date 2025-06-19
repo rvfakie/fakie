@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="section">
     <h1 class="title">
       {{ $t('common.pronoun') }} <span>{{ $t('cv.title') }}</span>
     </h1>
@@ -94,6 +94,14 @@ const reverse = ref(false);
 </script>
 
 <style lang="scss" scoped>
+.section {
+  padding: 64px;
+
+  @include mobile {
+    padding: 32px 16px;
+  }
+}
+
 .journey {
   margin: 100px 0;
   font-weight: 500;

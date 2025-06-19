@@ -8,6 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "start": "node .output/server/index.mjs",
     "lint": "node ./node_modules/eslint/bin/eslint.js --format gitlab --ext .js,.vue,.ts --ignore-path .gitignore .",
     "lintfix": "node ./node_modules/eslint/bin/eslint.js -c .eslintrc.cjs --fix --ext .js,.vue,.ts --ignore-path .gitignore .",
     "check-types": "vue-tsc --noEmit",

@@ -2,111 +2,162 @@
 
 // Derivatives
 @mixin typo-h1 {
-  @include typo-96;
 
-  @include mobile {
-    @include typo-64;
+  & {
+    @include typo-96;
+
+    @include mobile {
+      @include typo-64;
+    }
   }
 }
 
 @mixin typo-h2 {
-  @include typo-48;
 
-  @include mobile {
-    @include typo-36;
+  & {
+    @include typo-48;
+
+    @include mobile {
+      @include typo-36;
+    }
   }
 }
 
 @mixin typo-h3 {
-  @include typo-36;
 
-  @include mobile {
-    @include typo-24;
+  & {
+    @include typo-36;
+
+    @include mobile {
+      @include typo-24;
+    }
   }
 }
 
 @mixin typo-36-24 {
-  @include typo-36;
 
-  @include mobile {
-    @include typo-24;
+  & {
+    @include typo-36;
+
+    @include mobile {
+      @include typo-24;
+    }
   }
 }
 
 @mixin typo-24-20 {
-  @include typo-24;
 
-  @include mobile {
-    @include typo-20;
+  & {
+    @include typo-24;
+
+    @include mobile {
+      @include typo-20;
+    }
   }
 }
 
 @mixin typo-24-18 {
-  @include typo-24;
 
-  @include mobile {
-    @include typo-18;
+  & {
+    @include typo-24;
+
+    @include mobile {
+      @include typo-18;
+    }
   }
 }
 
 @mixin typo-18-16 {
-  @include typo-18;
 
-  @include mobile {
-    @include typo-16;
+  & {
+    @include typo-18;
+
+    @include mobile {
+      @include typo-16;
+    }
   }
 }
 
 @mixin typo-16-14 {
-  @include typo-16;
 
-  @include mobile {
-    @include typo-14;
+  & {
+    @include typo-16;
+
+    @include mobile {
+      @include typo-14;
+    }
   }
 }
 
 @mixin typo-serif {
-  font-family: "Victor Mono", serif;
+
+  & {
+    font-family: "Victor Mono", serif;
+  }
 }
 
 @mixin typo-sans-serif {
-  font-family: "Roboto", sans-serif;
+
+  & {
+    font-family: "Roboto", sans-serif;
+  }
 }
 
 
 @mixin typo-96 {
-  font-size: 96px;
-  line-height: 102px;
+
+  & {
+    font-size: 96px;
+    line-height: 102px;
+  }
 }
 
 @mixin typo-64 {
-  font-size: 64px;
-  line-height: 70px;
+
+  & {
+    font-size: 64px;
+    line-height: 70px;
+  }
 }
 
 @mixin typo-48 {
-  font-size: 48px;
-  line-height: 56px;
+
+  & {
+    font-size: 48px;
+    line-height: 56px;
+  }
 }
 
 @mixin typo-36 {
-  font-size: 36px;
-  line-height: 42px;
+
+  & {
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 
 @mixin typo-28 {
-  font-size: 28px;
-  line-height: 32px;
+
+  & {
+    font-size: 28px;
+    line-height: 32px;
+  }
 }
 
 @mixin typo-24 {
-  font-size: 24px;
-  line-height: 32px;
+
+  & {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 @mixin typo-20 {
-  font-size: 20px;
-  line-height: 26px;
+
+  & {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 @mixin typo-18 {
@@ -115,11 +166,17 @@
 }
 
 @mixin typo-16 {
-  font-size: 16px;
-  line-height: 22px;
+
+  & {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 @mixin typo-14 {
-  font-size: 14px;
-  line-height: 20px;
+
+  & {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }

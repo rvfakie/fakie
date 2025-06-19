@@ -98,7 +98,7 @@ const reverse = ref(false);
   padding: 64px;
 
   @include mobile {
-    padding: 32px 16px;
+    padding: 48px 16px;
   }
 }
 

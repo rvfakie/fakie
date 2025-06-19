@@ -28,7 +28,7 @@ import Illustration from '~/assets/svg/fakie-3.svg?component';
   padding: 64px 0 0 64px;
 
   @include mobile {
-    padding: 32px 0 0;
+    padding: 48px 0 0;
   }
 }
 

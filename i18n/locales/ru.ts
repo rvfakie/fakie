@@ -76,7 +76,7 @@ export default {
       home: 'Главная',
       cv: 'Резюме',
     },
-    color_theme_dark: 'тьма',
-    color_theme_light: 'свет',
+    color_theme_dark: 'темнее',
+    color_theme_light: 'светлее',
   },
 } satisfies typeof en;

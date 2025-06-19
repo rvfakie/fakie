@@ -70,8 +70,9 @@ const toggleColorTheme = () => {
 
   padding: 4px 16px;
 
-  background: var(--colors-primary);
-  border-bottom: 2px solid var(--colors-primary-border);
+  // background: var(--colors-primary);
+  // border-bottom: 2px solid var(--colors-primary-border);
+  background: var(--colors-secondary);
 }
 
 .languages {
@@ -80,6 +81,7 @@ const toggleColorTheme = () => {
 }
 
 .button {
+  color: var(--colors-secondary-text);
   text-transform: uppercase;
 
   @include typo-24-20;

@@ -18,6 +18,11 @@
 
 <script setup lang="ts">
 import Illustration from '~/assets/svg/fakie-3.svg?component';
+
+definePageMeta({
+  title: 'home.meta.title' satisfies I18nKeys,
+  description: 'home.meta.description' satisfies I18nKeys,
+});
 </script>
 
 <style lang="scss" scoped>

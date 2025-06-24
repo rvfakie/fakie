@@ -34,16 +34,12 @@
     </p>
 
     <p class="text">
-      <a
-        href="mailto:rvfakie@gmail.com"
-      >
+      <a href="mailto:rvfakie@gmail.com">
         rvfakie@gmail.com
       </a>
     </p>
 
-    <p
-      class="subtitle journey"
-    >
+    <p class="subtitle journey">
       {{ $t('cv.description') }}
 
       <button
@@ -90,6 +86,11 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  title: 'cv.meta.title' satisfies I18nKeys,
+  description: 'cv.meta.description' satisfies I18nKeys,
+});
+
 const reverse = ref(false);
 </script>
 

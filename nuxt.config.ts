@@ -4,6 +4,18 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
 
+  app: {
+    head: {
+      title: 'fakie',
+      meta: [
+        // Other dynamic tags are set in app.vue
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'fakie' },
+        { property: 'og:image', content: '/sharing.png' },
+      ],
+    },
+  },
+
   modules: [
     '@nuxtjs/i18n',
   ],

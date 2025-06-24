@@ -1,8 +1,16 @@
 export default {
   home: {
+    meta: {
+      title: 'fakie',
+      description: 'I\'m web developer with a passion for creating modern and responsive web applications',
+    },
     description: 'I\'m web developer with a passion for creating modern and responsive web applications',
   },
   cv: {
+    meta: {
+      title: 'fakie: CV',
+      description: 'It\'s my CV',
+    },
     title: 'CV',
     description: 'Here is my experience in',
     ascending: 'ascending order',

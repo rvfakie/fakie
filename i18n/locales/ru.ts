@@ -2,9 +2,17 @@ import en from './en';
 
 export default {
   home: {
+    meta: {
+      title: 'fakie',
+      description: 'Я веб-разработчик, увлеченный созданием современных и адаптивных веб-приложений',
+    },
     description: 'Я веб-разработчик, увлеченный созданием современных и адаптивных веб-приложений',
   },
   cv: {
+    meta: {
+      title: 'fakie: Резюме',
+      description: 'Это мое резюме',
+    },
     title: 'резюме',
     description: 'Тут мой опыт работы с',
     ascending: 'самого начала',

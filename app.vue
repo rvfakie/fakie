@@ -29,7 +29,7 @@ useHead({
     { property: 'og:title', content: meta.value.title },
     { property: 'og:description', content: meta.value.description },
     { property: 'og:locale', content: head.value.htmlAttrs.lang },
-    { property: 'og:url', content: config.public.base_url + route.path },
+    { property: 'og:url', content: config.public.baseUrl + route.path },
   ],
 });
 </script>

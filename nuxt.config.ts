@@ -2,7 +2,7 @@ import svgLoader from 'vite-svg-loader';
 
 export default defineNuxtConfig({
   site: {
-    url: 'https://fakie.ru',
+    url: process.env.NUXT_PUBLIC_BASE_URL,
     name: 'fakie',
   },
 
@@ -18,12 +18,6 @@ export default defineNuxtConfig({
     },
   },
 
-  runtimeConfig: {
-    public: {
-      baseUrl: '',
-    },
-  },
-
   modules: [
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
@@ -31,7 +25,7 @@ export default defineNuxtConfig({
   ],
 
   i18n: {
-    baseUrl: 'https://fakie.ru',
+    baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
     strategy: 'prefix_and_default',
     defaultLocale: 'en',
     detectBrowserLanguage: {

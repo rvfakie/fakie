@@ -8,7 +8,6 @@
 const { t } = useI18nTyped();
 const head = useLocaleHead();
 const route = useRoute();
-const config = useRuntimeConfig();
 
 // It is safe to use route.meta['key'] as I18nKeys
 // here as long as we declare route.meta in
@@ -24,12 +23,12 @@ useHead({
     dir: () => head.value.htmlAttrs.dir as 'ltr' | 'rtl' | 'auto',
   }),
   title: () => meta.value.title,
+  link: head.value.link,
   meta: () => [
     { name: 'description', content: meta.value.description },
     { property: 'og:title', content: meta.value.title },
     { property: 'og:description', content: meta.value.description },
-    { property: 'og:locale', content: head.value.htmlAttrs.lang },
-    { property: 'og:url', content: config.public.baseUrl + route.path },
+    ...head.value.meta,
   ],
 });
 </script>

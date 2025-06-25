@@ -23,6 +23,8 @@ jobs:
 
       - name: 🔨 Build Nuxt SSR app
         run: npm run build
+        env:
+          NUXT_PUBLIC_BASE_URL: https://fakie.ru
 
       - name: 📡 Upload .output/ to VPS via SCP
         uses: appleboy/scp-action@v0.1.4

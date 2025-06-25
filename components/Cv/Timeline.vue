@@ -1,9 +1,6 @@
 <template>
   <div class="timeline-container">
-    <div
-      class="pointer"
-      @click="timeline.reverse()"
-    >
+    <div class="pointer">
       <div class="circle" />
 
       <span class="its">{{ $t('common.pronoun') }}</span>

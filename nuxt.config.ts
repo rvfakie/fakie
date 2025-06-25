@@ -22,7 +22,13 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
+    'nuxt-gtag',
   ],
+
+  gtag: {
+    enabled: process.env.NODE_ENV === 'production',
+    id: process.env.GTM_ID,
+  },
 
   i18n: {
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL,

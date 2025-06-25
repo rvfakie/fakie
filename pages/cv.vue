@@ -45,7 +45,7 @@
       <button
         type="button"
         class="order-button"
-        @click="reverse = !reverse"
+        @click="onReverseClick"
       >
         {{ reverse ? $t('cv.ascending') : $t('cv.descending') }}
       </button>
@@ -91,7 +91,15 @@ definePageMeta({
   description: 'cv.meta.description' satisfies I18nKeys,
 });
 
+const { gtag } = useGtag();
+
 const reverse = ref(false);
+
+const onReverseClick = () => {
+  gtag('event', 'CV reverse click');
+
+  reverse.value = !reverse.value;
+};
 </script>
 
 <style lang="scss" scoped>

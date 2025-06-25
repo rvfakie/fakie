@@ -27,7 +27,7 @@ export default defineNuxtConfig({
 
   gtag: {
     enabled: process.env.NODE_ENV === 'production',
-    id: process.env.GTM_ID,
+    id: process.env.GTAG_ID,
   },
 
   i18n: {

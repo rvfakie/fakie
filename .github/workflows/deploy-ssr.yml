@@ -25,7 +25,7 @@ jobs:
         run: npm run build
         env:
           NUXT_PUBLIC_BASE_URL: https://fakie.ru
-          GTM_ID: ${{ secrets.GTM_ID }}
+          GTM_ID: ${{ secrets.GTAG_ID }}
 
       - name: 📡 Upload .output/ to VPS via SCP
         uses: appleboy/scp-action@v0.1.4

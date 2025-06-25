@@ -1,8 +1,10 @@
 import svgLoader from 'vite-svg-loader';
 
 export default defineNuxtConfig({
-  compatibilityDate: '2025-05-15',
-  devtools: { enabled: true },
+  site: {
+    url: process.env.BASE_URL,
+    name: 'fakie',
+  },
 
   app: {
     head: {
@@ -16,8 +18,16 @@ export default defineNuxtConfig({
     },
   },
 
+  runtimeConfig: {
+    public: {
+      base_url: '',
+    },
+  },
+
   modules: [
     '@nuxtjs/i18n',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
   ],
 
   i18n: {
@@ -50,7 +60,7 @@ export default defineNuxtConfig({
       // allow html in locales
       strictMessage: false,
     },
-    vueI18n: './i18n/index.ts',
+    vueI18n: '~/i18n/index.ts',
   },
 
   css: [
@@ -73,4 +83,7 @@ export default defineNuxtConfig({
       }),
     ],
   },
+
+  compatibilityDate: '2025-05-15',
+  devtools: { enabled: true },
 });

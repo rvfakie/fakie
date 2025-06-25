@@ -8,6 +8,7 @@
 const { t } = useI18nTyped();
 const head = useLocaleHead();
 const route = useRoute();
+const config = useRuntimeConfig();
 
 // It is safe to use route.meta['key'] as I18nKeys
 // here as long as we declare route.meta in
@@ -28,7 +29,7 @@ useHead({
     { property: 'og:title', content: meta.value.title },
     { property: 'og:description', content: meta.value.description },
     { property: 'og:locale', content: head.value.htmlAttrs.lang },
-    { property: 'og:url', content: `https://fakie.ru/${route.path}` },
+    { property: 'og:url', content: config.public.base_url + route.path },
   ],
 });
 </script>

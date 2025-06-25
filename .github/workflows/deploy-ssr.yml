@@ -30,7 +30,7 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
-          source: ".output/,package.json"
+          source: ".output/"
           target: "${{ secrets.VPS_DEPLOY_PATH }}"
 
       - name: 🚀 SSH into VPS & Restart App with PM2

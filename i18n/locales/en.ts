@@ -24,7 +24,7 @@ export default {
     links: 'Links',
     usa: 'USA',
     russia: 'Russia',
-    current: 'looking for a job',
+    current: 'open to opportunities',
     and_I_am: 'and I\'m',
     at: 'at',
     at_the: 'at the',

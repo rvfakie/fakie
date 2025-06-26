@@ -70,8 +70,6 @@ const toggleColorTheme = () => {
 
   padding: 4px 16px;
 
-  // background: var(--colors-primary);
-  // border-bottom: 2px solid var(--colors-primary-border);
   background: var(--colors-secondary);
 }
 

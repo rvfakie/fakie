@@ -82,7 +82,12 @@ export default {
       home: 'Home',
       cv: 'CV',
     },
-    color_theme_dark: 'dark',
-    color_theme_light: 'light',
+    color_theme_dark: 'darker',
+    color_theme_light: 'brighter',
+  },
+  error: {
+    not_found: 'The is no such page in this project',
+    default: 'Whoops, something unpredictable happened\n\nProceed to ',
+    main_page_link: 'main page',
   },
 };

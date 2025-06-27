@@ -85,6 +85,11 @@ export default {
       cv: 'Резюме',
     },
     color_theme_dark: 'темнее',
-    color_theme_light: 'светлее',
+    color_theme_light: 'ярче',
+  },
+  error: {
+    not_found: 'Такой страницы не существует',
+    default: 'Упс, случилось что-то непредсказуемое\n\nВернитесь на ',
+    main_page_link: 'главную страницу',
   },
 } satisfies typeof en;

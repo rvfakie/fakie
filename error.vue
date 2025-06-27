@@ -28,6 +28,14 @@ import type { NuxtError } from '#app';
 const { error = null } = defineProps({
   error: Object as () => NuxtError,
 });
+
+const { t } = useI18nTyped();
+
+useHead({
+  title: () => error?.statusCode === 404 ?
+    t('error.meta.not_found_title') :
+    t('error.meta.default_title'),
+});
 </script>
 
 <style lang="scss" scoped>

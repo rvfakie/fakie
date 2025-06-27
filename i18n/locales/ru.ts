@@ -88,6 +88,10 @@ export default {
     color_theme_light: 'ярче',
   },
   error: {
+    meta: {
+      not_found_title: 'fakie: Страница не найдена',
+      default_title: 'fakie: Необработанная ошибка',
+    },
     not_found: 'Такой страницы не существует',
     default: 'Упс, случилось что-то непредсказуемое\n\nВернитесь на ',
     main_page_link: 'главную страницу',

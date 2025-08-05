@@ -45,7 +45,7 @@ export default {
     storkclub_task_2: 'Работа с клиентским порталом, админкой, лендингами для маркетинга',
     storkclub_task_3: 'Планирование спринтов',
     storkclub_achievement_1: 'i18n с интеграцией Lokalise и Smartcat, включая поддержку RTL',
-    storkclub_achievement_2: 'соответствие a11y',
+    storkclub_achievement_2: 'Соответствие a11y',
     storkclub_achievement_3: 'Валидация ответов от API и их тайпинг через Superstruct',
     storkclub_achievement_4: 'Автоматизация схем из Swagger в Superstruct',
     storkclub_achievement_5: 'UI/UX, реализация UI-kit из макетов с документацией в Storybook',

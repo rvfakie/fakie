@@ -33,12 +33,6 @@
       </a>
     </p>
 
-    <p class="text">
-      <a href="mailto:rvfakie@gmail.com">
-        rvfakie@gmail.com
-      </a>
-    </p>
-
     <p class="subtitle journey">
       {{ $t('cv.description') }}
 

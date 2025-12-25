@@ -91,7 +91,7 @@
 </template>
 
 <script setup lang="ts">
-import { monthMedium, dateMedium } from '~/utils/formatDate.js';
+import { monthMedium } from '~/utils/formatDate.js';
 
 const { t } = useI18nTyped();
 
@@ -100,13 +100,13 @@ const props = defineProps<{
 }>();
 
 const timeline = ref([
-  {
-    id: '1',
-    date: dateMedium(new Date()),
-    title: t('cv.current'),
-    preposition: '',
-    short: true,
-  },
+  // {
+  //   id: '1',
+  //   date: dateMedium(new Date()),
+  //   title: t('cv.current'),
+  //   preposition: '',
+  //   short: true,
+  // },
   {
     id: '2',
     date: `${monthMedium(new Date('2020-12-01'))} – ${monthMedium(new Date('2025-03-01'))}`,
